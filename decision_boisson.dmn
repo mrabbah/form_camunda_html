@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0rwsnyp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="Decision_BOISSON" name="Decision Boisson">
+    <decisionTable id="DecisionTable_17x7brs" hitPolicy="FIRST">
+      <input id="Input_1" label="Plât">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>plat</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0cvfpdh">
+          <text>"tajine","pizza","crepe"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_15pd9nu" label="Tranche Jour">
+        <inputExpression id="LiteralExpression_1097e1z" typeRef="string">
+          <text>trancheJour</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_15axbws">
+          <text>"midi","soir"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" name="Boisson" typeRef="string">
+        <outputValues id="UnaryTests_1b5wwiq">
+          <text>"orange","thè","eau"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_09943bg">
+        <inputEntry id="UnaryTests_1ezdkjm">
+          <text>"tajine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e70hr4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1csmx9v">
+          <text>"thè"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mq20o0">
+        <inputEntry id="UnaryTests_0li0ph1">
+          <text>"pizza","crepe"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mmg27k">
+          <text>"midi"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l5hnb5">
+          <text>"orange"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1asj0yj">
+        <inputEntry id="UnaryTests_0oio32k">
+          <text>"crepe"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q4b02e">
+          <text>"soir"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xpvxgq">
+          <text>"thè"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r9isfe">
+        <inputEntry id="UnaryTests_0x4evi6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i5bzd0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1i08kw3">
+          <text>"eau"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_BOISSON">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
